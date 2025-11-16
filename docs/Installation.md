@@ -47,7 +47,7 @@ Setting the host data directory largely depends on how you are installing Mainta
     -u 1000:1000 \
     -p 6246:6246 \ # (1)!
     --restart unless-stopped \
-    ghcr.io/maintainerr/maintainerr:latest # (2)!
+    ghcr.io/maintainerr/maintainerr:2 # (2)!
 ```
 
 1. This is defined as `host:container`.
@@ -73,7 +73,7 @@ docker rm -f maintainerr
 Pull the latest image:
 
 ```bash
-docker pull ghcr.io/maintainerr/maintainerr:latest
+docker pull ghcr.io/maintainerr/maintainerr:2
 ```
 
 Finally, run the container with the same parameters you originally used to create/start the container.
@@ -87,7 +87,7 @@ Define the Maintainerr service in your docker-compose.yml as follows.
 ``` yaml {.annotate}
 services:
     maintainerr:
-        image: ghcr.io/maintainerr/maintainerr:latest # (1)!
+        image: ghcr.io/maintainerr/maintainerr:2 # (1)!
         user: 1000:1000
         volumes:
           - type: bind

@@ -3,4 +3,4 @@ description: Contributing to Maintainerr in some way? Look no further. All you n
 title: Contributing
 ---
 
---8<-- "https://raw.githubusercontent.com/jorenn92/Maintainerr/refs/heads/main/CONTRIBUTING.md"
+--8<-- "https://raw.githubusercontent.com/Maintainerr/Maintainerr/refs/heads/main/CONTRIBUTING.md"
