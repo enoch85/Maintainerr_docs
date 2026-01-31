@@ -5,7 +5,7 @@ title: Installation
 
 Docker is Maintainerr's supported method of installation.
 
-Images for amd64 & arm64 are available under `jorenn92/maintainerr` and `ghcr.io/maintainerr/maintainerr`.
+Images for amd64 & arm64 are available under `maintainerr/maintainerr` and `ghcr.io/maintainerr/maintainerr`.
 The containers data location is set as /opt/data. A Docker [volume][tooltip] is strongly encouraged to persist your configuration.
 
 [tooltip]: https://docs.docker.com/storage/volumes/#start-a-container-with-a-volume "Click here to be taken to the Docker documentation page on volumes."
@@ -51,7 +51,7 @@ Setting the host data directory largely depends on how you are installing Mainta
 ```
 
 1. This is defined as `host:container`.
-2. For this line, you could also use `jorenn92/maintainerr` instead, to use the DockerHub image.
+2. For this line, you could also use `maintainerr/maintainerr` instead, to use the DockerHub image.
 3. In Docker containers, you are able to bind a host directory to a directory inside the container. This allows for persistent data when a container is restarted or reset.
 
 ??? note "Development Versions"
@@ -60,7 +60,7 @@ Setting the host data directory largely depends on how you are installing Mainta
     Changing from a development version to a stable version is not supported.
 
     - `ghcr.io/maintainerr/maintainerr:main` for the develop branch
-    - `jorenn92/maintainerr:main` for the Docker Hub development image.
+    - `maintainerr/maintainerr:main` for the Docker Hub development image.
 
 ### Updating
 
@@ -100,7 +100,7 @@ services:
         restart: unless-stopped
 ```
 
-1. For this line, you could also use `jorenn92/maintainerr` instead, to use the DockerHub image. The `latest` tag at the end is not required, unless you want to specify which tag to use.
+1. For this line, you could also use `maintainerr/maintainerr` instead, to use the DockerHub image. The `latest` tag at the end is not required, unless you want to specify which tag to use.
 2. This is defined as `host:container`.
 3. In Docker containers, you are able to bind a host directory to a directory inside the container. This allows for persistent data when a container is restarted or reset.
 
@@ -110,7 +110,7 @@ services:
     Changing from a development version to a stable version is not supported.
 
     - `ghcr.io/maintainerr/maintainerr:main` for the develop branch
-    - `jorenn92/maintainerr:main` for the Docker Hub development image.
+    - `maintainerr/maintainerr:main` for the Docker Hub development image.
 
 Save your docker-compose.yml file.
 Then, while in the directory where your docker-compose file exists, start all services defined in your Compose file:

@@ -29,7 +29,7 @@ use_directory_urls: true
 # Repository
 repo_name: maintainerr/maintainerr
 repo_url: https://github.com/maintainerr/maintainerr
-copyright: Copyright &copy; Jorenn92
+copyright: Copyright &copy; Maintainerr
 
 # Configuration
 theme:
@@ -158,7 +158,7 @@ extra:
       link: https://github.com/maintainerr/maintainerr
       name: Github
     - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/jorenn92/maintainerr/
+      link: https://hub.docker.com/r/maintainerr/maintainerr/
       name: Docker Hub
     - icon: fontawesome/brands/discord
       link: https://discord.gg/WP4ZW2QYwk
