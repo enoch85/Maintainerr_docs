@@ -3,7 +3,7 @@ description: Rules configurations and basic information about using rules.
 title: Rules
 ---
 
-Rules are the core of Maintainerr. They evaluate your Plex media based on the parameters you set. If a media item matches a rule, it is added to a collection.
+Rules are the core of Maintainerr. They evaluate your media based on the parameters you set. If a media item matches a rule, it is added to a collection.
 
 Media in a collection will remain there for the number of days you specify. After that period, Maintainerr will delete the media from disk and any connected external applications. If a collections media item no longer matches a rule, it will be removed from it.
 
@@ -18,25 +18,25 @@ General info about the rule. Some of the information specified here will be show
 
 | Parameter                    | Description                                                                                                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name                         | The Rule and Plex Collection  |
+| Name                         | The Rule and Collection name  |
 | Description                  | Description of the Rule. This is also used as the Collection's description  |
-| Library                      | Which Plex library's media to use  |
+| Library                      | Which media library to use  |
 | Media type                   | The type of TV media the rules will apply to, either the entire show, only seasons or only episodes  |
 | Radarr server                | The server that Radarr specific rules and actions will be applied to  |
 | Radarr action                | Unmonitor or delete movies from Radarr  |
 | Sonarr server                | The server that Sonarr specific rules and actions will be applied to  |
 | Sonarr action                | Unmonitor or delete series from Sonarr  |
-| Plex action                  | Delete media from Plex directly. Only applicable when no *arr server is selected.  |
+| Media server action          | Delete media from your media server directly. Only applicable when no *arr server is selected.  |
 | Do nothing action            | No action will be taken on the media in this collection.  |
 | Active                       | If inactive, the rule won't run  |
-| Show on library recommended  | Show the rule's collection on the Plex library recommended screen  |
-| Show on home                 | Show the rule's collection on the Plex home screen  |
+| Show on library recommended  | Show the rule's collection on the library recommended screen  |
+| Show on home                 | Show the rule's collection on the home screen  |
 | Add list exclusions          | Prevent \*arr import lists from re-adding media that has been removed by Maintainerr  |
 | Media deleted after days     | Amount of days media will live in the collection before deletion  |
-| Use rules                    | Disable the rule engine, for when you want to add media to the Plex collection manually  |
+| Use rules                    | Disable the rule engine, for when you want to add media to the collection manually  |
 | Force reset Overseerr record | Force resets the Overseerr record by deleting any requests instead of relying on availability-sync. 'Enable CSRF Protection' needs to be disabled in Overseer's settings for this to work. [^1] |
-| Custom collection            | Use a manually created Plex collection. Maintainerr will never automatically add or remove this collection from Plex.  |
-| Custom collection name       | The name of the manual Plex collection to use [^2]  |
+| Custom collection            | Use a manually created collection. Maintainerr will never automatically add or remove this collection from your media server.  |
+| Custom collection name       | The name of the manual collection to use [^2]  |
 
 [^1]:
     This is the old method of telling Overseerr that something has been removed. The default method now, is to tell Overseerr to initiate an `Availability Sync`, through its API. This happens automatically at the end of the collection handler job. This option is not available for Jellyseerr.
@@ -49,13 +49,13 @@ With the *Media type* parameter, you specify which type of media to target in a 
 For example, you might create a rule group that selects and deletes old or watched seasons of a TV show, while keeping newer seasons untouched. Alternatively, you could target watched episodes and set them to unmonitored in Sonarr.
 
 ???+ info
-    - Plex collections cannot contain mixed media types. Therefore, Maintainerr restricts each rule group / collection to a single media type.
+    - Collections cannot contain mixed media types. Therefore, Maintainerr restricts each rule group / collection to a single media type.
 
     - Running rules on episodes is slower than on shows or seasons, as Maintainerr must process a larger volume of data.
 
 #### Manual collections
 
-If you prefer to manage Plex collections yourself or use a different tool, you can enable the manual collection option. With this enabled, Maintainerr will not automatically create and delete collections in Plex.
+If you prefer to manage collections yourself or use a different tool, you can enable the manual collection option. With this enabled, Maintainerr will not automatically create and delete collections in your media server.
 
 ## Adding rules
 

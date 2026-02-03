@@ -1,5 +1,5 @@
 ---
-description: Information about Collection generation, syncing with Plex, and manual actions.
+description: Information about Collection generation, syncing with your media server, and manual actions.
 title: Collections
 ---
 A collection is auto generated when defining a rule. A collection holds all media that either got picked up by the handling of the corresponding rule or got manually added.
@@ -9,11 +9,11 @@ When the specified amount of days that media must live in the collection is pass
 ???+ note "Collection Handling"
      Collection handling is a batch process that runs every 12 hours. You can manually trigger it with the `Handle collection` button on the Collections page.
 
-## Plex
+## Media Server
 
-A collection will be reflected in Plex when it contains media. When no media is present, there's no use of having it in Plex. The Plex collection's title and description will be the same as the one in Maintainerr.
+A collection will be reflected in your media server when it contains media. When no media is present, there's no use of having it in your media server. The collection's title and description will be the same as the one in Maintainerr.
 
-If the `Show on home` option was checked, the Plex Collection will be shown on all Plex users home screen. This allows you to create, for instance, a 'Leaving soon' list.
+If the `Show on home` option was checked, the collection will be shown on all users' home screens. This allows you to create, for instance, a 'Leaving soon' list.
 
 ## Manual actions
 
@@ -41,14 +41,14 @@ Here you're able to remove the media's current exclusions, exclude for all colle
 
 When media has exclusions, an `Excl` badge will be shown on the top-right side of the card.
 
-### Data syncing from Plex
+### Data syncing from media server
 
-If media is added to the Plex collection outside of Maintainerr, it will be added to the associated Maintainerr collection. These manually added items will be ignored by the rule processor.
+If media is added to the collection outside of Maintainerr, it will be added to the associated Maintainerr collection. These manually added items will be ignored by the rule processor.
 
-If you delete media from the Plex collection outside of Maintainerr, it will be removed from the corresponding Maintainerr collection. However, if the media still matches your rules, it will be re-added to the collection in subsequent rule processing cycles.
+If you delete media from the collection outside of Maintainerr, it will be removed from the corresponding Maintainerr collection. However, if the media still matches your rules, it will be re-added to the collection in subsequent rule processing cycles.
 
 ## Misc
 
 - By clicking on the collection's name you can see all media currently added to the collection. On the top-right side there'll be a number indicating the number of days before removal.
 
-- Maintainerr will never remove the collection from Plex if you specified a manual collection.
+- Maintainerr will never remove the collection from your media server if you specified a manual collection.

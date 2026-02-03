@@ -9,6 +9,7 @@ authors:
 **Ok so you installed Maintainerr and don't know where to start.**
 
 The rule system behind Maintainerr is quite complex, and therefore powerful.  Getting started can be a little daunting at first. That is only because it is new to you. When you get the hang of it, you will be cleaning up that mess you call a library in no time. This will be the first in a series of tutorials that should help you get more familiar with the rules and rule setup.
+
 <!-- more -->
 
 </br>
@@ -16,9 +17,9 @@ The rule system behind Maintainerr is quite complex, and therefore powerful.  Ge
 <img alt="poster" src="https://docs.maintainerr.info/latest/images/movie_poster.png" width="150" height="250"></img>
 </p>
 
-Let's take the above movie as an example. This isn't a real movie, but for the purposes of this tutorial we are going to pretend. This movie has the following attributes across Plex, Overseerr, and Radarr:
+Let's take the above movie as an example. This isn't a real movie, but for the purposes of this tutorial we are going to pretend. This movie has the following attributes across your media server (Plex/Jellyfin), Overseerr, and Radarr:
 
-**Plex** -
+**Media Server (Plex/Jellyfin)** -
 
 | Added | Last Viewed | Times Viewed | Audience Rating |
 | -------|-------------|--------------|---------------- |
@@ -38,12 +39,12 @@ Let's take the above movie as an example. This isn't a real movie, but for the p
 
 </br>
 
-> :bulb: This information can be looked at for an actual item in your Plex library. You can do it through the Plex UI or you can parse through the XML of an item.
-<a href="https://support.plex.tv/articles/201998867-investigate-media-information-and-formats/#:~:text=Open%20the%20Media,the%20XML%20information"> 🌐 &rarr; Link to see how to get your Plex Media Info and XML data</a>
+> :bulb: This information can be viewed for an actual item in your media server library through the UI or API responses.
+<a href="https://support.plex.tv/articles/201998867-investigate-media-information-and-formats/#:~:text=Open%20the%20Media,the%20XML%20information"> 🌐 &rarr; Plex: Link to see how to get your Media Info and XML data</a>
 
 We want to make a rule that would add this movie to it's collection.
 
- :memo: There are many more attributes available in the API responses of Plex, Sonarr/Radarr, and Overseerr. We are only looking at these specific ones for the tutorial.
+ :memo: There are many more attributes available in the API responses of your media server, Sonarr/Radarr, and Overseerr. We are only looking at these specific ones for the tutorial.
 
  Also, this won't be the only movie in the collection. However, all of the other movies that will be added into this collection matched the rule-set for the same reason/s.
 
@@ -56,9 +57,10 @@ We will start from the top of a new rule.
 <p align="center"><img alt="screenshot-1" src="https://docs.maintainerr.info/latest/images/screenshot-1.png" width="80%"></img></p>
 
 - 1: This is the name of the Rule, and will eventually be the name of the Collection that gets created.
-- 2: Self explanatory but you can put whatever you want here. It will be shown in Plex when you open the collection.
+- 2: Self explanatory but you can put whatever you want here. It will be shown on your media server when you open the collection.
      <p align="center"><img alt"screenshot_plex" src="https://docs.maintainerr.info/latest/images/screenshot_plex_collection.png" width="75%"></p>
-- 3: Drop-down list of your Plex Libraries. Which library is this rule going to be run against?
+     <p align="center"><em>Screenshot shows Plex example</em></p>
+- 3: Drop-down list of your media server libraries. Which library is this rule going to be run against?
 - 4: This will not be shown if you select a `Movies` library in step 3. If you selected a `TVShow` library, your options will be shows/seasons/episodes. What type of TVShow media are we going to run the rule against? An entire show, just seasons, or just episodes? Different options will be made available to you or taken away, depending on what you select here.
 - 5: Sonarr/Radarr action is what is going to happen after the `action after days` set in step 6. Options are dependent on the library and media type from above. `Delete` will remove the files and the item from Sonarr/Radarr. `Unmonitor and delete` will unmonitor (not remove) the item from Sonarr/Radarr but delete the files. `Unmonitor and keep` will unmonitor the item from Sonarr/Radarr and <u>**keep**</u> the files.
 - 6: Think of this as a "delay" setting. How many days after this rule is ran, items have been matched to this rules filter parameters and added to the collection, will we execute the action set in step 5?
@@ -67,12 +69,13 @@ We will start from the top of a new rule.
 
 - 7: How many months are we going to keep logs of this collections actions?
 - 8: Is this Rule active? Will it be one of the rules ran either by a manual run, or through periodic runs?
-- 9: Is this collection going to be shown on the Plex Home screen, or are you only going to be able to see it through the Plex Library screen?
+- 9: Collection visibility on your media server (Plex only - Jellyfin does not support these features):
+     - **Visible on Recommended** - Shows collection in the "Recommended" section
+     - **Visible on Home** - Shows collection on both your own home screen and shared user home screens
 - 10: When the action set in step 5 is taken, will Maintainerr also send a hit back to Sonarr/Radarr that excludes this item from being automatically added by any import lists?
-- 11: :warning: It is recommended to keep this option off as it uses an outdated method. Maintainerr now automatically does this.
-  - When the action set in step 5 is taken, will we tell Overseerr that this item is no longer available and can be requested again?
-- 12: You can toggle the rule system off and on. This is useful if you have collections in Plex that you want to see in Maintainerr, but don't want any actions taken on the collection.
-- 13: You can create a collection in Plex, and then use that collection in Maintainerr. If you are doing that, tick this Custom Collection box to on. This can be useful if there is a collection made by say PMM or by you, and you want to execute some rules against it.
+- 11: When the action set in step 5 is taken, will we force immediate removal in Overseerr/Jellyseerr? If disabled, the automatic media availability sync will eventually reflect the removal. Note: Overseerr only supports Plex, while Jellyseerr supports both Plex and Jellyfin.
+- 12: You can toggle the rule system off and on. This is useful if you have collections on your media server that you want to see in Maintainerr, but don't want any actions taken on the collection.
+- 13: You can create a collection on your media server, and then use that collection in Maintainerr. If you are doing that, tick this Custom Collection box to on. This can be useful if there is a collection made by say PMM or by you, and you want to execute some rules against it.
 
    > <img alt="screenshot-discord" src="https://docs.maintainerr.info/latest/images/screenshot_discord_comment.png" width=85%></img>
 
