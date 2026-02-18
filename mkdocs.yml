@@ -244,6 +244,7 @@ nav:
     - Works.md
     - Common.md
     - ReverseProxy.md
+    - Downgrade.md
   - Rules:
     - Rules.md
     - Glossary.md
