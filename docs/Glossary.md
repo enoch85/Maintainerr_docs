@@ -60,7 +60,7 @@ The key is used for identification in Yaml rule files.
 #### Times viewed
 
 !!! info ""
-    The number of times the Plex item has been viewed. This counts users who have **completed** watching.
+    The total number of completed viewing sessions across all Plex users. If the same user has watched the item multiple times, each session counts separately.
 
 - Key: Plex.viewCount
 - Availability: movies
