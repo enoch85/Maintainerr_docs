@@ -56,7 +56,7 @@ Below is an example of your test's output.
       ruleResults:
         - operator: OR
           action: contains_partial
-          firstValueName: Overseerr - Requested by user (Plex or local username)
+          firstValueName: Seerr - Requested by user (Plex or local username)
           firstValue: null
           secondValueName: text
           secondValue: ydkmlt84
@@ -81,7 +81,7 @@ Below is an example of your test's output.
 ruleResults:
   - operator: OR
     action: contains_partial
-    firstValueName: Overseerr - Requested by user (Plex or local username)
+    firstValueName: Seerr - Requested by user (Plex or local username)
     firstValue: null
     secondValueName: text
     secondValue: ydkmlt84
@@ -90,13 +90,13 @@ ruleResults:
 
 </div>
 
-As you can see, the overall test result was false. This is because this specific rule is testing to see if `Overseerr - Requested by user (Plex or local username)` contains_partial `ydkmlt84`. Which it did not.
+As you can see, the overall test result was false. This is because this specific rule is testing to see if `Seerr - Requested by user (Plex or local username)` contains_partial `ydkmlt84`. Which it did not.
 
-Test media results show you the `firstValue` which is the information returned from the service, in this case Overseerr.
+Test media results show you the `firstValue` which is the information returned from the service, in this case Seerr.
 
 Then it shows you the comparative, the `secondValue`, which is the custom text that you put in the rule to look for.
 
-In this case the `firstValue` returned a null value because this item was not requested in Overseerr, therefore there is no data on who requested it in Overseerr.
+In this case the `firstValue` returned a null value because this item was not requested in Seerr, therefore there is no data on who requested it in Seerr.
 
 ## Test Media results
 

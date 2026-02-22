@@ -29,7 +29,7 @@ These settings are OK for most installations.
 ### Plex
 
 When using a local Plex instance, make sure your Plex's 'secure connections' network setting is set to 'preferred' instead of 'required'.
-If you'd like Maintainerr to communicate securely, you'll have to use your '*.plex.direct' URL as the hostname. You can copy this URL from Overseerr's configuration. Make sure you include 'https://'.
+If you'd like Maintainerr to communicate securely, you'll have to use your '*.plex.direct' URL as the hostname. You can copy this URL from Seerr's configuration. Make sure you include 'https://'.
 
 | Param        | Description           |
 | ------------- |:-------------:|
@@ -66,25 +66,15 @@ Jellyfin uses API keys for authentication. You'll need to select an admin user f
 
 You can switch between Plex and Jellyfin. See the [Migration](Migration.md) page for details on how switching works and what gets migrated.
 
-## Overseerr
+## Seerr
 
-Overseerr's configuration is required to use its parameters in rules and to remove requests. </br>
-
-| Param | Description |
-| ------------- |:-------------:|
-| Hostname or IP| The domain name or local IP of the host your server runs on |
-| Port          | The port Overseerr runs on |
-| Api key  | Overseerr API key, should be visible in the Overseerr settings |
-
-## Jellyseerr
-
-Jellyseerr's configuration is required to use its parameters in rules and to remove requests. </br>
+Seerr's configuration is required to use its parameters in rules and to remove requests. </br>
 
 | Param | Description |
 | ------------- |:-------------:|
 | Hostname or IP| The domain name or local IP of the host your server runs on |
-| Port          | The port Jellyseerr runs on |
-| Api key  | Jellyseerr API key, should be visible in the Jellyseerr settings |
+| Port          | The port Seerr runs on |
+| Api key  | Seerr API key, should be visible in the Seerr settings |
 
 ## Radarr
 

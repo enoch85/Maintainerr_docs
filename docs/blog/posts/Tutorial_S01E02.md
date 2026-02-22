@@ -18,7 +18,7 @@ Let's bring back the Movie from episode 1, that we wanted to add into our new co
 <img alt="poster" src="https://docs.maintainerr.info/latest/images/movie_poster.png" width="150" height="250"></img>
 </p>
 
-This movie has the following attributes across Plex, Overseerr, and Radarr:
+This movie has the following attributes across Plex, Seerr, and Radarr:
 
 **Plex** -
 
@@ -26,7 +26,7 @@ This movie has the following attributes across Plex, Overseerr, and Radarr:
 | -------|-------------|--------------|---------------- |
 | 3Nov2023 | 10Jan2024 | 4 | 7.3 |
 
-**Overseerr** -
+**Seerr** -
 
 | Requested by | Requested Date | Times Requested by Anyone|
 | ------------| --------------- | ------------- |
@@ -59,8 +59,8 @@ With this information, we have quite a few options that we can use as rule param
 
 **Let's try one more.**
 
-- 2: Rule 1 states `Plex-Times Viewed` `bigger` `number` `3`. Rule 2 states AND `Overseerr-Amount of Requests` `equals` `Plex-Times Viewed`.
-  - This rule-set **WOULD** add our movie because it's *Times Viewed* amount is 4 (bigger than 3), **AND** the *Amount of Requests*(4) from Overseerr **EQUALS** the *Times Viewed*(4) amount from Plex. <font color=yellow>(Rule1 AND Rule2)</font>
+- 2: Rule 1 states `Plex-Times Viewed` `bigger` `number` `3`. Rule 2 states AND `Seerr-Amount of Requests` `equals` `Plex-Times Viewed`.
+  - This rule-set **WOULD** add our movie because it's *Times Viewed* amount is 4 (bigger than 3), **AND** the *Amount of Requests*(4) from Seerr **EQUALS** the *Times Viewed*(4) amount from Plex. <font color=yellow>(Rule1 AND Rule2)</font>
 
 Those are some fairly simple AND examples, and hopefully it is starting to become obvious what is going on. Within a *section*, and only using AND operators, each item also needs to match the rule before it to be counted as a match and added to the collection.
 
@@ -82,9 +82,9 @@ We don't have to go too far in-depth with this because of what we have already l
 
 - 1: We can use one rule that states `Plex-Date Added` `before` `amount of days` `90`.
   - This will not match in our special tutorial scenario because the day the Movie was added to Plex happened only *60* days BEFORE today's date. Not quite *90* days yet.
-- 2: Our next rule states OR `Overseerr-Requested by user (Plex or local username)` `Contains (Partial list match)` `text` `user_girl123`.
+- 2: Our next rule states OR `Seerr-Requested by user (Plex or local username)` `Contains (Partial list match)` `text` `user_girl123`.
   - This would match because as we can see, that is who requested the movie.
-- 3: This rule-set **WOULD** add our movie because it meets one **OR** the other of our criteria. It was added *60* days ago so it does not meet our criteria of *BEFORE* *90* days, AKA the day it was added has not yet been 90 days *BEFORE* today's date. It did however match the Overseerr requested by user rule. It gets added because we said we wanted <font color=yellow>(Rule 1 OR Rule 2)</font>.
+- 3: This rule-set **WOULD** add our movie because it meets one **OR** the other of our criteria. It was added *60* days ago so it does not meet our criteria of *BEFORE* *90* days, AKA the day it was added has not yet been 90 days *BEFORE* today's date. It did however match the Seerr requested by user rule. It gets added because we said we wanted <font color=yellow>(Rule 1 OR Rule 2)</font>.
 Now let's get a visual.
 
 ### Visual Example

@@ -241,6 +241,7 @@ nav:
   - Getting started:
     - Installation.md
     - Configuration.md
+    - Migration.md
     - Works.md
     - Common.md
     - ReverseProxy.md

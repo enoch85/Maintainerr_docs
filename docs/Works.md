@@ -17,7 +17,7 @@ Maintainerr looks through your media library to find items that match against th
     ```
     Date added before 90 days
     AND
-    Viewed by username contains Overseerr- requested by username
+    Viewed by username contains Seerr- requested by username
     ```
     There are more examples and explanations of each option here &#8594; [Rule Glossary](https://docs.maintainerr.info/latest/Glossary) and here &#8594; [Walkthroughs](https://docs.maintainerr.info/latest/blog/).
 

@@ -17,7 +17,7 @@ The rule system behind Maintainerr is quite complex, and therefore powerful.  Ge
 <img alt="poster" src="https://docs.maintainerr.info/latest/images/movie_poster.png" width="150" height="250"></img>
 </p>
 
-Let's take the above movie as an example. This isn't a real movie, but for the purposes of this tutorial we are going to pretend. This movie has the following attributes across your media server (Plex/Jellyfin), Overseerr, and Radarr:
+Let's take the above movie as an example. This isn't a real movie, but for the purposes of this tutorial we are going to pretend. This movie has the following attributes across your media server (Plex/Jellyfin), Seerr, and Radarr:
 
 **Media Server (Plex/Jellyfin)** -
 
@@ -25,7 +25,7 @@ Let's take the above movie as an example. This isn't a real movie, but for the p
 | -------|-------------|--------------|---------------- |
 | 3Nov2023 | 10Jan2024 | 4 | 7.3 |
 
-**Overseerr** -
+**Seerr** -
 
 | Requested by | Requested Date | Times Requested by Anyone|
 | ------------| --------------- | ------------- |
@@ -44,7 +44,7 @@ Let's take the above movie as an example. This isn't a real movie, but for the p
 
 We want to make a rule that would add this movie to it's collection.
 
- :memo: There are many more attributes available in the API responses of your media server, Sonarr/Radarr, and Overseerr. We are only looking at these specific ones for the tutorial.
+ :memo: There are many more attributes available in the API responses of your media server, Sonarr/Radarr, and Seerr. We are only looking at these specific ones for the tutorial.
 
  Also, this won't be the only movie in the collection. However, all of the other movies that will be added into this collection matched the rule-set for the same reason/s.
 
@@ -73,7 +73,7 @@ We will start from the top of a new rule.
      - **Visible on Recommended** - Shows collection in the "Recommended" section
      - **Visible on Home** - Shows collection on both your own home screen and shared user home screens
 - 10: When the action set in step 5 is taken, will Maintainerr also send a hit back to Sonarr/Radarr that excludes this item from being automatically added by any import lists?
-- 11: When the action set in step 5 is taken, will we force immediate removal in Overseerr/Jellyseerr? If disabled, the automatic media availability sync will eventually reflect the removal. Note: Overseerr only supports Plex, while Jellyseerr supports both Plex and Jellyfin.
+- 11: When the action set in step 5 is taken, will we force immediate removal in Seerr? If disabled, the automatic media availability sync will eventually reflect the removal.
 - 12: You can toggle the rule system off and on. This is useful if you have collections on your media server that you want to see in Maintainerr, but don't want any actions taken on the collection.
 - 13: You can create a collection on your media server, and then use that collection in Maintainerr. If you are doing that, tick this Custom Collection box to on. This can be useful if there is a collection made by say PMM or by you, and you want to execute some rules against it.
 

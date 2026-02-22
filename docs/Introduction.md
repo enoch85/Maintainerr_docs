@@ -35,15 +35,14 @@ title: Introduction
 - Show your new collection on the Home screen.
 - Set a number of days the collection will exist before it is deleted.
 - Set Radarr and Sonarr to either **remove** or **unmonitor** media in the collection.
-- Auto clear requests from Overseerr/Jellyseerr
+- Auto clear requests from Seerr
 - Remove media from disk
 - Switch between Plex and Jellyfin with automatic rule migration
 
 Maintainerr supports rules across these apps:
 
 - Plex or Jellyfin (choose one)
-- Overseerr
-- Jellyseerr
+- Seerr
 - Radarr
 - Sonarr
 - Tautulli

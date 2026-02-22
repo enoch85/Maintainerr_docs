@@ -29,7 +29,7 @@ A. When the Maintainerr page loads up for the very first time, it is supposed to
 
 Q. There are a lot of entries in my logs about Maintainerr being unable to find the TVdbID or the TMDBid. They look similar to this. `[maintainerr] | 01/10/2024 14:20:52  [WARN] [SonarrGetterService] [TVDB] Failed to fetch tvdb id for 'Some TV Show'`
 
-A. Most likely this is a problem with the Plex metadata attached to a particular item. Maintainerr looks to the Plex API for the TMDB or TVDB id to make sure we are matching with the EXACT same item in Sonarr/Radarr/Overseerr/Jellyseerr/Tautulli.
+A. Most likely this is a problem with the Plex metadata attached to a particular item. Maintainerr looks to the Plex API for the TMDB or TVDB id to make sure we are matching with the EXACT same item in Sonarr/Radarr/Seerr/Tautulli.
 
 ??? example "See The Fix?"
     Unfortunately at this time there isn't a great fix. The issue comes from inside Plex's metadata agent and what TMDB or TVDB it is assigning or can't find (didn't attach). We are actively looking into a solution but as of right now we don't have one. You could try to **Fix Match** the item in Plex but that isn't guaranteed to solve it.

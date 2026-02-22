@@ -34,12 +34,12 @@ General info about the rule. Some of the information specified here will be show
 | Add list exclusions          | Prevent \*arr import lists from re-adding media that has been removed by Maintainerr  |
 | Media deleted after days     | Amount of days media will live in the collection before deletion  |
 | Use rules                    | Disable the rule engine, for when you want to add media to the collection manually  |
-| Force reset Overseerr record | Force resets the Overseerr record by deleting any requests instead of relying on availability-sync. 'Enable CSRF Protection' needs to be disabled in Overseer's settings for this to work. [^1] |
+| Force reset Seerr record | Force resets the Seerr record by deleting any requests instead of relying on availability-sync. 'Enable CSRF Protection' needs to be disabled in Seerr's settings for this to work. [^1] |
 | Custom collection            | Use a manually created collection. Maintainerr will never automatically add or remove this collection from your media server.  |
 | Custom collection name       | The name of the manual collection to use [^2]  |
 
 [^1]:
-    This is the old method of telling Overseerr that something has been removed. The default method now, is to tell Overseerr to initiate an `Availability Sync`, through its API. This happens automatically at the end of the collection handler job. This option is not available for Jellyseerr.
+    This is the old method of telling Seerr that something has been removed. The default method now, is to tell Seerr to initiate an `Availability Sync`, through its API. This happens automatically at the end of the collection handler job.
 [^2]: Only shown and needed when the Custom Collection checkbox is checked.
 
 #### TV media type
